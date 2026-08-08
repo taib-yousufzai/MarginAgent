@@ -1,0 +1,14 @@
+{
+  "identifier": "default",
+  "description": "Default capabilities for MarginAgent",
+  "platforms": ["windows", "macOS", "linux"],
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "dialog:default",
+    "shell:default",
+    "fs:default",
+    "fs:allow-home-read-recursive",
+    "fs:allow-home-write-recursive"
+  ]
+}

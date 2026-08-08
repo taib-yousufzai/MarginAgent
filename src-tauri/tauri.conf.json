@@ -1,0 +1,40 @@
+{
+    "productName":  "MarginAgent",
+    "version":  "0.1.0",
+    "identifier":  "dev.marginagent.app",
+    "build":  {
+                  "frontendDist":  "../dist",
+                  "devUrl":  "http://localhost:5176",
+                  "beforeBuildCommand":  "npm run build"
+              },
+    "app":  {
+                "windows":  [
+                                {
+                                    "title":  "MarginAgent",
+                                    "width":  1280,
+                                    "height":  800,
+                                    "minWidth":  900,
+                                    "minHeight":  600
+                                }
+                            ],
+                "security":  {
+                                 "csp":  "default-src \u0027self\u0027 \u0027unsafe-inline\u0027 \u0027unsafe-eval\u0027; connect-src \u0027self\u0027 http://localhost:9749 ws://localhost:9749; frame-src http://localhost:9749; img-src \u0027self\u0027 data: http://localhost:9749"
+                             }
+            },
+    "bundle":  {
+                   "active":  true,
+                   "targets":  "all",
+                   "icon":  [
+                                "icons/32x32.png",
+                                "icons/128x128.png",
+                                "icons/128x128@2x.png",
+                                "icons/icon.icns",
+                                "icons/icon.ico"
+                            ]
+               },
+    "plugins":  {
+                    "shell":  {
+                                  "open":  true
+                              }
+                }
+}
